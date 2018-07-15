@@ -20,5 +20,8 @@ class SuperHero(Person):
     
 per1 = Person('Khush')
 per2 = SuperHero('Ajay','batman')
+print(isinstance(per1,SuperHero))
+print(isinstance(per2,SuperHero))
+print(issubclass(SuperHero,Person))
 per1.reveal_identity()
 per2.reveal_identity()
