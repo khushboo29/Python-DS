@@ -1,4 +1,4 @@
-iimport datetime
+import datetime
 
 class Employee:
     raise_amt = 1.04
@@ -52,12 +52,29 @@ class Employee:
         if day.weekday() == 5 or day.weekday() == 6:
             return False
         return True
-
+    
+    def __repr__(self):
+        return '{}-{}-{}'.format(self.first,self.last,self.pay)
+    
+    def __str__(self):
+        return '{} - {}'.format(self.fullname,self.email)
+    
+    def __add__(self,other):
+        return self.pay+ other.pay
+        
+print(int.__add__(4,5))
 print(Employee.no_of_emp)
 emp1 = Employee('khushboo','tiwari',20000)
+print(emp1)
+#repr is an unambious representation of an object
+print(repr(emp1))
+#str is an readable representation of an object
+print(str(emp1))
 emp2 = Employee('ajay','sharma',200000)
 emp2.fullname = 'avdhesh tiwari'
 emp3 = Employee.from_string('nikki-sharma-200000')
+#checking customize adding functionality
+print(emp1+emp2)
 print(Employee.no_of_emp)
 print(emp1.fullname)
 print(emp2.fullname)
