@@ -1,5 +1,11 @@
 '''Ensure a class has only one __instance, and provide a global point of access to it.
 single set of data state in all objects '''
+
+#this is implemented with lazy initalization
+
+''' Lazy instantiation makes sure that the object gets created when it's actually needed
+In the following code example, when we say s=Singleton(), it calls the __init__ method but no new object gets created. However, actual object creation happens when we call Singleton.Instance(). This is how lazy instantiation is achieved.'''
+
 class Singleton(object):
     __instance = None;
     
