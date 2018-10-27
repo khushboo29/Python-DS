@@ -1,3 +1,5 @@
+#iterators and iterables using class and the generators
+
 #class
 class Sentence:
 	def __init__(self,sentence):
