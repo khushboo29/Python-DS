@@ -1,0 +1,22 @@
+#arr = [7, 5, 2, 7, 8, -2, 25, 25]
+arr=[9,8,7,24,-4,5,-1]
+print("given arr: ",arr)
+
+def iterateList(arr):
+    arr.sort(reverse=True)
+    print("sorted arr: ",arr)
+    start = 0
+    end = len(arr)
+    while start < end:
+        end-=1
+        yield arr[start],arr[end]
+        start+=1
+        
+for i in iterateList(arr):
+    nlist=[]
+    #print("i : ",i)
+    items = list(i)
+    #print("items ",items)
+    nlist.extend[items]
+    print("mendering arr: ",nlist)
+    
