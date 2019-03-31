@@ -1,0 +1,25 @@
+def check_prime(number):
+	for divisor in range(2, int(number ** 0.5)+1):
+		if number % divisor == 0:
+			return False
+	return True
+		
+		
+
+def Prime(max):
+	n=1
+	if n< max:
+		n+=1
+		if check_prime(n):
+			yield n
+			
+p = Prime(10)
+
+for i in p:
+	print(i)
+		
+#genertaor expression
+primes = (number for number in range(2,100) if(check_prime(number)) )
+
+for i in primes:
+    print(i)
