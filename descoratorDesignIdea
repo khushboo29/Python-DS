@@ -1,0 +1,47 @@
+class fastfood:
+	size=0
+	toppingsType=0
+	
+    def price():
+        pass
+    
+class size(fastfood):
+    def price():
+        if size=='Small':
+            return 100
+        elif size == 'Medium':
+            return 200
+        elif size == 'Large':
+            return 300
+        else:
+            return 150
+
+class toppings(fastfood):
+    def price():
+        if toppingsType=='all':
+            return 300
+        elif toppingsType=='xyz':
+            return 200
+        else:
+            return 150
+
+class crust_type(fastfood):
+    def price():
+        if type == 'pan':
+            return 200
+        elif type=='cheese':
+            return 300
+        else:
+            return 150
+    
+class isExtraCheese(fastfood):
+    def price():
+        if iec == 'True':
+            return 500
+        else:
+            return 200
+    
+class pizzaPrice(fastfood):
+    def price():	
+        return (size.price()+toppings.price()+crust_type.price()+isExtraCheese.price())
+        
